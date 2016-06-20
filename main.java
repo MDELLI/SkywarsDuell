@@ -114,19 +114,19 @@ public class swduell extends JavaPlugin implements Listener{
 							
 					         for(Player p : Bukkit.getOnlinePlayers()){
 				                   if (high == 3) {
-				                	   p.sendTitle("§33", "");
+				                	   p.sendTitle("Â§33", "");
 				                	   
 				                   }
 				                   if (high == 2) {
-				                	   p.sendTitle("§e2", "");
+				                	   p.sendTitle("Â§e2", "");
 				                	   
 				                   }
 				                   if (high == 1) {
-				                	   p.sendTitle("§c1", "");
+				                	   p.sendTitle("Â§c1", "");
 				                	   
 				                   }
 				                   if (high == 0) {
-				                	   p.sendTitle("§aGo!", "");
+				                	   p.sendTitle("Â§aGo!", "");
 				                	   
 				                   }
 					         }
@@ -139,7 +139,7 @@ public class swduell extends JavaPlugin implements Listener{
 						for (Player all : Bukkit.getOnlinePlayers()) {
 		            all.playSound(all.getLocation(), Sound.NOTE_PLING, 5.0F, 5.0F);
 						}
-						Bukkit.broadcastMessage("§eSkyWars§8: §7Die Runde startet in §6" + high + " §7Sekunden.");
+						Bukkit.broadcastMessage("Â§eSkyWarsÂ§8: Â§7Die Runde startet in Â§6" + high + " Â§7Sekunden.");
 						
 						
 							}
@@ -147,7 +147,7 @@ public class swduell extends JavaPlugin implements Listener{
 						else{
 							//nach dem countdown:
 							if (high == 0) {
-								Bukkit.broadcastMessage("§eSkyWars§8: §aAlle Spieler werden Teleportiert!");
+								Bukkit.broadcastMessage("Â§eSkyWarsÂ§8: Â§aAlle Spieler werden Teleportiert!");
 								for (Player all : Bukkit.getOnlinePlayers()) {
 					                all.playSound(all.getLocation(), Sound.LEVEL_UP, 5.0F, 5.0F);
 					                all.getInventory().clear();
@@ -203,14 +203,14 @@ public class swduell extends JavaPlugin implements Listener{
 					if (restart != 0) {
 						restart--;			
 				if ((restart == 10) || (restart == 5) || (restart == 4) || (restart == 3) || (restart == 2) || (restart == 1)) {
-					Bukkit.broadcastMessage("§eSkyWars§8: §7Der Server startet in §c" + restart + " §7Sekunden neu.");
+					Bukkit.broadcastMessage("Â§eSkyWarsÂ§8: Â§7Der Server startet in Â§c" + restart + " Â§7Sekunden neu.");
 						}	
 					}
 					else{
 
 							
 							for (Player all : Bukkit.getOnlinePlayers()) {
-							all.kickPlayer("§eSkyWars§8: §7Der Server startet §cJetzt §7neu.");
+							all.kickPlayer("Â§eSkyWarsÂ§8: Â§7Der Server startet Â§cJetzt Â§7neu.");
 							Bukkit.shutdown();
 						}
 						
@@ -244,22 +244,22 @@ public class swduell extends JavaPlugin implements Listener{
 			if (cmd.getName().equalsIgnoreCase("start")) {
 				if ((ingame == false) && (Bukkit.getOnlinePlayers().size() > 1) && (p.hasPermission("SkyWars.start"))) {
 					if (high > 3) {
-					p.sendMessage("§eSkyWars§8: §aDu hast die Runde gestartet!");
+					p.sendMessage("Â§eSkyWarsÂ§8: Â§aDu hast die Runde gestartet!");
 					high = 4;
 					}
 				}else{
-					p.sendMessage("§eSkyWars§8: §cDu kannst die Runde gerade nicht starten!");
+					p.sendMessage("Â§eSkyWarsÂ§8: Â§cDu kannst die Runde gerade nicht starten!");
 				}
 			}
 			
 			if (cmd.getName().equalsIgnoreCase("skywars")) {
-				p.sendMessage("§eSkyWars Duell v1.3 §cDeveloped by §bElli_");
+				p.sendMessage("Â§eSkyWars Duell v1.3 Â§cDeveloped by Â§bElli_");
 			}
 			
 			
 			if (cmd.getName().equalsIgnoreCase("setspawn1")) {
 				if (!p.hasPermission("SkyWars.setup")) {
-					p.sendMessage("§eSkyWars§8: §cDu hast keine Rechte auf diesen Befehl!");
+					p.sendMessage("Â§eSkyWarsÂ§8: Â§cDu hast keine Rechte auf diesen Befehl!");
 				}else{
 				locs.set("SkyWars.Spawns.1.x", loc.getX());
 				locs.set("SkyWars.Spawns.1.y", loc.getY());
@@ -267,7 +267,7 @@ public class swduell extends JavaPlugin implements Listener{
 				locs.set("SkyWars.Spawns.1.yaw", loc.getYaw());
 				locs.set("SkyWars.Spawns.1.pitch", loc.getPitch());
 				locs.set("SkyWars.Spawns.1.world", loc.getWorld().getName());
-				p.sendMessage("§eSkyWars§8: §aDu hast den 1. Spawn gesetzt!");
+				p.sendMessage("Â§eSkyWarsÂ§8: Â§aDu hast den 1. Spawn gesetzt!");
 				
 				try {
 					locs.save(Locations);
@@ -280,7 +280,7 @@ public class swduell extends JavaPlugin implements Listener{
 			
 			if (cmd.getName().equalsIgnoreCase("setspawn2")) {
 				if (!p.hasPermission("SkyWars.setup")) {
-					p.sendMessage("§eSkyWars§8: §cDu hast keine Rechte auf diesen Befehl!");
+					p.sendMessage("Â§eSkyWarsÂ§8: Â§cDu hast keine Rechte auf diesen Befehl!");
 				}else{
 				locs.set("SkyWars.Spawns.2.x", loc.getX());
 				locs.set("SkyWars.Spawns.2.y", loc.getY());
@@ -288,7 +288,7 @@ public class swduell extends JavaPlugin implements Listener{
 				locs.set("SkyWars.Spawns.2.yaw", loc.getYaw());
 				locs.set("SkyWars.Spawns.2.pitch", loc.getPitch());
 				locs.set("SkyWars.Spawns.2.world", loc.getWorld().getName());
-				p.sendMessage("§eSkyWars§8: §aDu hast den 2. Spawn gesetzt!");
+				p.sendMessage("Â§eSkyWarsÂ§8: Â§aDu hast den 2. Spawn gesetzt!");
 				
 				try {
 					locs.save(Locations);
@@ -301,7 +301,7 @@ public class swduell extends JavaPlugin implements Listener{
 			
 			if (cmd.getName().equalsIgnoreCase("setlobby")) {
 				if (!p.hasPermission("SkyWars.setup")) {
-					p.sendMessage("§eSkyWars§8: §cDu hast keine Rechte auf diesen Befehl!");
+					p.sendMessage("Â§eSkyWarsÂ§8: Â§cDu hast keine Rechte auf diesen Befehl!");
 				}else{
 				locs.set("SkyWars.Lobby.x", loc.getX());
 				locs.set("SkyWars.Lobby.y", loc.getY());
@@ -309,7 +309,7 @@ public class swduell extends JavaPlugin implements Listener{
 				locs.set("SkyWars.Lobby.yaw", loc.getYaw());
 				locs.set("SkyWars.Lobby.pitch", loc.getPitch());
 				locs.set("SkyWars.Lobby.world", loc.getWorld().getName());
-				p.sendMessage("§eSkyWars§8: §aDu hast den Lobby Spawn gesetzt!");
+				p.sendMessage("Â§eSkyWarsÂ§8: Â§aDu hast den Lobby Spawn gesetzt!");
 				
 				try {
 					locs.save(Locations);
@@ -322,7 +322,7 @@ public class swduell extends JavaPlugin implements Listener{
 			
 			if (cmd.getName().equalsIgnoreCase("setspectator")) {
 				if (!p.hasPermission("SkyWars.setup")) {
-					p.sendMessage("§eSkyWars§8: §cDu hast keine Rechte auf diesen Befehl!");
+					p.sendMessage("Â§eSkyWarsÂ§8: Â§cDu hast keine Rechte auf diesen Befehl!");
 				}else{
 				locs.set("SkyWars.Spectator.x", loc.getX());
 				locs.set("SkyWars.Spectator.y", loc.getY());
@@ -330,7 +330,7 @@ public class swduell extends JavaPlugin implements Listener{
 				locs.set("SkyWars.Spectator.yaw", loc.getYaw());
 				locs.set("SkyWars.Spectator.pitch", loc.getPitch());
 				locs.set("SkyWars.Spectator.world", loc.getWorld().getName());
-				p.sendMessage("§eSkyWars§8: §aDu hast den Spectatorspawn gesetzt!");
+				p.sendMessage("Â§eSkyWarsÂ§8: Â§aDu hast den Spectatorspawn gesetzt!");
 				
 				try {
 					locs.save(Locations);
@@ -456,21 +456,21 @@ public class swduell extends JavaPlugin implements Listener{
 			    Objective objective = board.registerNewObjective("test", "dummy");
 			    objective.setDisplaySlot(DisplaySlot.SIDEBAR);
 
-			    objective.setDisplayName("§r" + locs.getString("SkyWars.Scoreboard.Title"));
-			    Score Score9 = objective.getScore("§e§l ");
+			    objective.setDisplayName("Â§r" + locs.getString("SkyWars.Scoreboard.Title"));
+			    Score Score9 = objective.getScore("Â§eÂ§l ");
 			    Score9.setScore(6);
-			    Score Score8 = objective.getScore("§fSpielmodus");
+			    Score Score8 = objective.getScore("Â§fSpielmodus");
 			    Score8.setScore(5);
 
-			    Score Score7 = objective.getScore("§eSkyWars Duell");
+			    Score Score7 = objective.getScore("Â§eSkyWars Duell");
 			    Score7.setScore(4);
 
-			    Score Score6 = objective.getScore("§4§l ");
+			    Score Score6 = objective.getScore("Â§4Â§l ");
 			    Score6.setScore(3);
-			    Score Score5 = objective.getScore("§fMap");
+			    Score Score5 = objective.getScore("Â§fMap");
 			    Score5.setScore(2);
 
-			    Score Score4 = objective.getScore("§c" + locs.getString("SkyWars.Scoreboard.Mapname"));
+			    Score Score4 = objective.getScore("Â§c" + locs.getString("SkyWars.Scoreboard.Mapname"));
 			    Score4.setScore(1);
 			    
 			    p.setScoreboard(board);
@@ -486,42 +486,42 @@ public class swduell extends JavaPlugin implements Listener{
 			    Objective objective = board.registerNewObjective("test", "dummy");
 			    objective.setDisplaySlot(DisplaySlot.SIDEBAR);
 
-			    objective.setDisplayName("§r" + locs.getString("SkyWars.Scoreboard.Title"));
-			    Score Score9 = objective.getScore("§e§l ");
+			    objective.setDisplayName("Â§r" + locs.getString("SkyWars.Scoreboard.Title"));
+			    Score Score9 = objective.getScore("Â§eÂ§l ");
 			    Score9.setScore(14);
-			    Score Score8 = objective.getScore("§fTeams");
+			    Score Score8 = objective.getScore("Â§fTeams");
 			    Score8.setScore(13);
 
-			    Score Score7 = objective.getScore("§cVerboten");
+			    Score Score7 = objective.getScore("Â§cVerboten");
 			    Score7.setScore(12);
 
-			    Score Score6 = objective.getScore("§4§l ");
+			    Score Score6 = objective.getScore("Â§4Â§l ");
 			    Score6.setScore(11);
-			    Score Score5 = objective.getScore("§fMap");
+			    Score Score5 = objective.getScore("Â§fMap");
 			    Score5.setScore(10);
 
-			    Score Score4 = objective.getScore("§e" + locs.getString("SkyWars.Scoreboard.Mapname"));
+			    Score Score4 = objective.getScore("Â§e" + locs.getString("SkyWars.Scoreboard.Mapname"));
 			    Score4.setScore(9);
 			    
-			    Score Score51 = objective.getScore("§5 ");
+			    Score Score51 = objective.getScore("Â§5 ");
 			    Score51.setScore(8);
 			    
-			    Score Score61 = objective.getScore("§fKills");
+			    Score Score61 = objective.getScore("Â§fKills");
 			    Score61.setScore(7);
 			    
-			    Score Score71 = objective.getScore("§c" + p.getStatistic(Statistic.PLAYER_KILLS));
+			    Score Score71 = objective.getScore("Â§c" + p.getStatistic(Statistic.PLAYER_KILLS));
 			    Score71.setScore(6);
 			    
-			    Score Score81 = objective.getScore("§6");
+			    Score Score81 = objective.getScore("Â§6");
 			    Score81.setScore(5);
 			    
-			    Score Score91 = objective.getScore("§fSpieler");
+			    Score Score91 = objective.getScore("Â§fSpieler");
 			    Score91.setScore(4);
 			    
-			    Score Score10 = objective.getScore("§b" + lebend.size());
+			    Score Score10 = objective.getScore("Â§b" + lebend.size());
 			    Score10.setScore(3);
 			    
-			    Score Score11 = objective.getScore("§7");
+			    Score Score11 = objective.getScore("Â§7");
 			    Score11.setScore(2);
 			    
 
